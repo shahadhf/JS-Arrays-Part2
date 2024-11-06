@@ -1,89 +1,62 @@
-/** TASK 1******
- * isArrayLengthOdd(numbers):
- * - receives array `numbers`
- * - returns true if array has an odd number of elements
- * - returns false otherwise
- *
- * e.g.
- * isArrayLengthOdd([1, 2, 3]) -> true
- * isArrayLengthOdd([1, 2, 3, 4]) -> flase
- */
+//Task 1
+
 function isArrayLengthOdd(numbers) {
-    // Your code here
-Function isArrayLengthOdd(numbers) {
-    const sizeOfArray = numbers.length;
-    if (sizeOfArray % 2) {
-        return true;
-        else { 
-            return false;
-        }
-    }
+  const sizeOfArray = numbers.length;
+  if (sizeOfArray % 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//console.log(isArrayLengthOdd([1, 2, 3, 4]));
+
+//Task 2
+
+function isArrayLengthEven(numbers) {
+  if (numbers.length % 2) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
-  }
-//console.log (isArrayLengthOdd)([1 ,2 ,3 ,4])
+//console.log(isArrayLengthEven([1, 2, 3, 4]));
 
+//Task 3
 
-  /**TASK 2******
- * isArrayLengthEven(numbers):
- * - receives array `numbers`
- * - returns true if array has an even number of elements
- * - returns false otherwise
- *
- * e.g.
- * isArrayLengthEven([1, 2, 3]) -> false
- * isArrayLengthEven([1, 2, 3, 4]) -> true
- */
-function isArrayLengthEven(numbers) {
-    // Your code here
-    function isArrayLengthEven(numbers) {
-        if (numbers.length % 2) {
-            return false;
-            else {
-                return true;
-            }
-        }
-    }
-  }
-
-//console.log(isArrayLengthEven) ([1, 2, 3, 4])
-
-
-  /** TASK 3*******
- * addLailaToArray(instructors):
- * - receives array `instructors`
- * - returns a new array that's a copy of array `instructors` with additional string "Laila"
- *
- * e.g.
- * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
- */
 function addLailaToArray(instructors) {
-    // Your code here
-    function addLailaToArray (instructors) {
-        const newInstructors = instructors;
-        newInstructors.push ("Laila");
-        return newInstructors;
+  const newInstructors = instructors;
+  newInstructors.push("Laila");
+  return newInstructors;
+}
 
-    }
+//console.log (addLailaToArray(["Mshary", "Hasan"]))
 
-  }
-  
-  //console.log (addLailaToArray (["Mshary", "hasan"]))
+//Task 4
 
-
-
-  /** TASK 4 ******
- * eliminateTeam(teams):
- * - receives array `teams`
- * - removes the last element from the array and return it
- *
- * e.g.
- * eliminateTeam(["Brazil", "Germany", "Italy"]) -> "Italy"
- */
 function eliminateTeam(teams) {
-    // Your code here
-const lastTeam = teams.pop ();
-return lastTeam;
-  }
+  const lastTeam = teams.pop();
+  return lastTeam;
+}
 
-//console.log(eliminateTeam(["Brazil", "Germany", "Italy"]))
+//console.log (eliminateTeam(["Brazil", "Germany", "Italy"]));
+
+//Challenge 1
+
+function secondHalfOfArrayIfItIsEven(fruits) {
+  if (isArrayLengthEven(fruits)) {
+    return fruits.slice(0, 2);
+  }
+}
+
+//console.log(secondHalfOfArrayIfItIsEven (["apple", "orange", "banana", "kiwi"]));
+
+//Challenge 2
+
+function youGottaCalmDown(shout) {
+  if (shout[shout.length - 1] !== "!") {
+    return shout;
+  }
+}
+
+//console.log (youGottaCalmDown ("Hello"));
